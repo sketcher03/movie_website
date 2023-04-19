@@ -1,0 +1,63 @@
+
+
+body{
+    font-family: 'ROBOTO', sans-serif;
+    margin: 0;
+}
+.container{
+    background-image: url("img/back.jpg");
+    height: 100vh;
+   
+}
+
+.navbar{
+    width: 100%;
+    background-color: black;
+    background-color: rgba(0,0, 0, 0.7);
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+.logo{
+    font-family: 'sen',sans-serif; 
+    font-size: 30px;
+    color: yellowgreen; 
+}
+
+.logo-container{
+    flex: 1;
+}
+
+.menu-container{
+    flex: 6;
+}
+
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.profile-text.container{
+    margin: 0 20px;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item{
+    margin-right: 30px;
+}
