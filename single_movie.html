@@ -10,51 +10,57 @@
 
     <link rel="stylesheet" href="css\style.css">
 </head>
+
+
 <body>
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="index.php" class="nav-logo">
-                <i class="fa-solid fa-vest-patches"></i> Retail Club
+            <a href="logo-container"><img class="logo" src="img/cover.png">
             </a>
 
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link active">Home</a>
+                        <a href="home.php" class="nav-link active">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="shop.php" class="nav-link">Shop</a>
+                        <a href="tv_show.php" class="nav-link">TV Show</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="cart.php" class="nav-link">Cart</a>
+                        <a href="movies.php" class="nav-link">Movies</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="about.php" class="nav-link">About</a>
+                        <a href="new.php" class="nav-link">New</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="contact.php" class="nav-link">Contact</a>
-                    </li>
+                    <input class ="searchbar" type="text" placeholder="Search..">
                 </ul>
             </div>
 
             <div class="nav-btn">
 
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="login and signup.php" class="login-btn" id="login-btn"><i class="fa-solid fa-user"></i></a>
-                    </li>
+                    
+                    <div class ="profile-container">
 
-                    <li class="nav-item">
-                        <a href="cart.php" class="nav-cart" id="cart-shop""><i class="fa-solid fa-cart-shopping"></i></a>
-                    </li>
+                        <img class="profile-picture"  src = "img/profile.jpg">
+
+                        <div class="profile-text-container">
+
+                            <span class="profile-text">profile</span>
+
+                             <i class="fas fa-caret-down"></i>
+                         </div>
+                     </div>
+
                 </ul>
 
             </div>
         </nav>
+
     </header>
 
     <section class="product-details">
@@ -176,7 +182,7 @@
 
     <!-- footer section -->
     <footer>
-        <h3>Retail Club</h3>
+        <h3>Movie Club</h3>
         <p>For more information on us,<br> please follow the links below</p>
 
         <div class="socials">
@@ -186,7 +192,7 @@
             <a href="#"><i class="fa-brands fa-artstation" target="_blank"></i></a>
         </div>
 
-        <h6>© 2022 Retail Club - All Rights Reserved</h6>
+        <h6>© 2022 Movie Club - All Rights Reserved</h6>
     </footer>
 
     <script>
