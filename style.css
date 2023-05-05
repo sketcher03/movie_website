@@ -140,25 +140,33 @@ body{
 }
 
 .content-container {
-    background: linear-gradient(black, gray);
+    background: black;
 }
 
-.movie-list-container {
+.movie-list-container,
+.series-list-container {
     padding: 30px 10px;
 }
   
-.movie-list-title{
+.movie-list-title,
+.series-list-title{
     font-size: 50px;
     color: white;
     margin: 0px 40px;
 }
 
-.movie-list-wrapper {
+.movie-list-wrapper, 
+.series-list-wrapper{
     position: relative;
     overflow: hidden;
 }
+
+.container.active {
+    background-color: white;
+}
   
-.movie-list {
+.movie-list, 
+.series-list{
     display: flex;
     align-items: center;
     width: 100%;
@@ -170,24 +178,31 @@ body{
     margin: 0px 40px;
 }
   
-.movie-list-item {
+.movie-list-item,
+.series-list-item{
     margin-right: 30px;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
   
-.movie-list-item:hover .movie-list-item-img {
+.movie-list-item:hover .movie-list-item-img, 
+.series-list-item:hover .series-list-item-img{
     transform: scale(1.1);
     opacity: 0.5;
 }
   
 .movie-list-item:hover .movie-list-item-title,
 .movie-list-item:hover .movie-list-item-desc,
-.movie-list-item:hover .movie-list-item-button {
+.movie-list-item:hover .movie-list-item-button, 
+
+.series-list-item:hover .series-list-item-title,
+.series-list-item:hover .series-list-item-desc,
+.series-list-item:hover .series-list-item-button{
     opacity: 1;
 }
   
-.movie-list-item-img {
+.movie-list-item-img,
+.series-list-item-img {
     transition: all 1s ease-in-out;
     width: 270px;
     height: 200px;
@@ -195,7 +210,8 @@ body{
     border-radius: 20px;
 }
   
-.movie-list-item-title {
+.movie-list-item-title,
+.series-list-item-titl{
     
     padding: 0 0px;
     font-size: 32px;
@@ -209,7 +225,8 @@ body{
     text-shadow: 2px 2px 4px #000000;
 }
   
-.movie-list-item-desc {
+.movie-list-item-desc, 
+.series-list-item-desc{
     color: white;
     text-shadow: 2px 2px 4px #000000;
     padding: 10px;
@@ -239,21 +256,9 @@ body{
     transition: 1s all ease-in-out;
 }
   
-.arrow {
-    font-size: 120px;
-    position: absolute;
-    top: 90px;
-    right: 0;
-    color: lightgray;
-    opacity: 0.5;
-    cursor: pointer;
-}
   
-.container.active {
-    background-color: white;
-}
-  
-.movie-list-title.active {
+.movie-list-title.active, 
+.series-list-title.active {
     color: black;
 }
   
