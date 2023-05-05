@@ -83,99 +83,111 @@ input{
 
 
 /* navbar */
-.container{
-    background-image: url("img/home.jpg");
-    background-size: cover;
-    height: 100%;
-}
-
-.navbar{
-    width: 100%;
-    height: 100vh;
-}
 
 .navbar-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: whitesmoke;
-    background-color: rgba(0,0, 0, 0.7);
+    background-color: rgba(10, 10, 10, 0.7);
+    padding: 15px 10px;
 }
 
 .logo{
-    height: 50px;
-    padding: 7.5px;
+    height: 60px;
+    width: 150px;
+    padding: 0px 7.5px;
+    padding-top: 10px;
 }
 
 .logo-container{
+    margin-left: 50px;
     flex: 1;
 }
 
-/* Main and Hero Section */
-.self{
-    background-image: url("https://i.ibb.co/KN66CVy/enchanting-girl-with-dark-curly-hair-fooling-around-outdoor-warm-summer-day-amazing-ginger-female-mo.jpg");
-    height: 100vh;
-    width: 100%;
-    background-position: top 25%;
-    background-size: cover;
+.menu-container{
+    flex: 6;
 }
 
-.hero{
-    height: 75vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 0px 100px;
-}
-
-.hero h4{
-    font-stretch: expanded;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    padding-bottom: 10px;
-    color: rgb(62, 38, 7);
-}
-
-.hero h2{
-    font-size: 75px;
-    line-height: 80px;
-    text-transform: capitalize;
-    color: rgb(223, 89, 18);
-}
-
-.hero h2 span{
-    color: rgb(42, 22, 0);
-}
-
-.hero h6{
-    font-weight: 400;
-    font-size: 14px;
-    padding-top: 10px;
-    color: rgb(62, 38, 7);
-}
-
-.hero p{
-    font-weight: 400;
-    color: rgb(222, 130, 37);
-    padding-bottom: 20px;
-}
-
-.hero button{
-    color: rgb(255, 255, 255);
-    background-color: rgb(246, 97, 5);
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: capitalize;
-    padding: 12px 24px;
+.searchbar{
+    padding: 5px 20px;
+    padding-right: 200px;
+    background-color: rgba(255, 255, 255,0.7);
     border-radius: 10px;
-    transition: transform 0.5s;
+    border: none;
+    outline: none;
+    margin-left: 100px;
 }
+
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    position:absolute;
+    right: 30px;
+}
+
+.profile-text-container{
+    margin: 0 20px;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item{
+    margin-right: 30px;
+    list-style: none;
+}
+
+.nav-link{
+    color: white;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.user-rating{
+    display: flex;
+    flex-direction: row;
+}
+
+.imdb-logo{
+    height: 50px;
+    width: 75px;    
+}
+
+#rate {
+    margin-left: 10px;
+    color: yellow;
+    font-weight: bold;
+}
+
+/* Trailer */
+.trailer{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.trailer h2{
+    padding: 20px;
+}
+
 
 /* Featured Products */
 
@@ -202,12 +214,15 @@ input{
 }
 
 .feature-product .product img{
+    object-fit: cover;
     width: 100%;
+    height: 450px;
     border-radius: 10px;
 }
 
 .feature-product .product .description{
-    text-align: start;
+    text-align: center;
+
     padding: 10px 0px;
 }
 
@@ -252,95 +267,6 @@ input{
     flex-wrap: wrap;
 }
 
-/* Banner Section */
-
-.banner{
-    padding: 40px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url("https://i.ibb.co/G38K2hx/1600w-qt-TMRJF4m0.webp");
-    width: 100%;
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.banner h2{
-    padding: 10px 0;
-}
-
-.banner h2 span{
-    color: rgb(255, 171, 125);
-}
-
-.banner button{
-    color: rgb(19, 168, 148);
-    background-color: rgb(255, 255, 255);
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: capitalize;
-    padding: 12px 24px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-/* Small Banner Section */
-
-.sm-banner .banner-box{
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url("https://i.ibb.co/ThpfGwf/fashion-image-elegant-stylish-couple-love-holding-hands-looking-each-other-with-pleasure-long-haired.jpg");
-    min-width: 650px;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    padding: 10px;
-    border-radius: 20px;
-}
-
-.sm-banner{
-    padding: 40px 75px;
-    display: flex;
-    justify-content: space-between;
-    flex: wrap;
-}
-
-.sm-banner .banner-box button{
-    color: rgb(19, 168, 148);
-    border: 2px solid rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: capitalize;
-    padding: 12px 24px;
-    border-radius: 10px;
-    transition: 0.5s;
-    margin-top: 10px;
-}
-
-.sm-banner .banner-box2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url("https://i.ibb.co/5hYJn54/fashion-pretty-cool-young-girl-shopping-bags-wearing-black-hat-white-pants-over-colorful-orange-back.jpg");
-    min-width: 650px;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    padding: 10px;
-    border-radius: 20px;
-}
 
 /* Footer Section */
 
@@ -410,15 +336,6 @@ footer h6{
     transition: .5s;
 }
 
-.product-details{
-    padding: 40px 80px;
-}
-
-.product-details .single-pro-image{
-    width: 40%;
-    margin-right: 50px;
-}
-
 .sml-img-grp{
     display: flex;
     justify-content: space-between;
@@ -435,8 +352,17 @@ footer h6{
 /* Product Page */
 
 .product-details{
+    padding: 40px 150px;
     display: flex;
     margin-top: 20px;
+}
+
+.product-details .single-pro-image{
+    width: 40%;
+    margin-right: 50px;
+    border-radius: 10px;
+    box-shadow: black;
+    height: max-content;
 }
 
 .product-details .single-pro-details{
@@ -446,6 +372,7 @@ footer h6{
 
 .product-details .single-pro-details h2{
     padding: 10px 0px;
+    font-size: 60px;
 }
 
 .product-details .single-pro-details span{
@@ -620,7 +547,7 @@ footer h6{
 }
 
 .contact .row form .message{
-    height: 150px;
+    height: 300px;
     resize: none;
 }
 
@@ -643,96 +570,4 @@ footer h6{
     color: white;
     transform: scale(1.05);
     cursor: pointer;
-}
-
-.cart{
-    margin-top: 40px;
-    padding: 40px 80px;
-}
-
-.cart table{
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
-}
-
-.cart table thead{
-    border: 2px solid rgb(132, 104, 63);
-    border-left: none;
-    border-right: none;
-}
-
-.cart table thead td{
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 15px;
-    padding: 20px 0px;
-}
-
-.cart table tbody td{
-    font-weight: 400;
-    padding: 20px 0px;
-}
-
-.cart table tbody td a{
-    color: white;
-    font-size: 30px;
-}
-
-.cart img{
-    width: 75px;
-    border-radius: 10px;
-}
-
-.cart input{
-    width: 72px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 15px;
-    margin-right: 10px;
-    color: white;
-    border: 2px solid rgb(81, 81, 81);
-    background: transparent;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.cart-add{
-    padding: 40px 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-top: 2px solid rgb(48, 48, 25);
-    border-radius: 30px;
-}
-
-.cart-add h3{
-    padding: 20px 0px;
-}
-
-.cart-add table{
-    border: 2px solid rgb(132, 104, 63);
-    border-left: none;
-    border-right: none;
-    padding: 20px 0px;
-    width: 90vh;
-}
-
-.cart-add table td{
-    padding: 10px 0px;
-}
-
-.cart-add button{
-    color: rgb(43, 43, 43);
-    background-color: rgb(246, 214, 5);
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: capitalize;
-    padding: 12px 24px;
-    border-radius: 10px;
-    transition: transform 0.5s;
-    margin: 50px 0px;
 }
