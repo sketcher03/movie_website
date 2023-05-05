@@ -111,47 +111,6 @@ input{
     flex: 1;
 }
 
-
-
-.menu-container{
-    flex: 6;
-}
-
-.searchbar{
-    padding: 5px 10px;
-    padding-right: 100px;
-    background-color: rgba(255, 255, 255,0.7);
-    border-radius: 10px;
-    border: none;
-    outline: none;
-}
-
-.profile-container{
-    flex: 2;
-    display: flex;
-    align-items: center;
-}
-
-.profile-text-container{
-    margin: 0 30px;
-}
-
-.profile-picture{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.menu-list{
-    display: flex;
-    list-style: none;
-}
-
-.menu-list-item{
-    margin-right: 30px;
-}
-
-
 /* Main and Hero Section */
 .self{
     background-image: url("https://i.ibb.co/KN66CVy/enchanting-girl-with-dark-curly-hair-fooling-around-outdoor-warm-summer-day-amazing-ginger-female-mo.jpg");
