@@ -1,13 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 
 *{
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .body{
-    font-family: 'ROBOTO', sans-serif;
+    
     margin: 0;
 }
+
+
+a{
+    text-decoration: none;
+}
+
 
 .container{
     background-image: url("img/home.jpg");
@@ -25,15 +36,19 @@
     align-items: center;
     justify-content: space-between;
     color: whitesmoke;
-    background-color: rgba(0,0, 0, 0.7);
+    background-color: rgba(10, 10, 10, 0.7);
+    padding: 15px 10px;
 }
 
 .logo{
-    height: 50px;
-    padding: 7.5px;
+    height: 60px;
+    width: 150px;
+    padding: 0px 7.5px;
+    padding-top: 10px;
 }
 
 .logo-container{
+    margin-left: 50px;
     flex: 1;
 }
 
@@ -42,22 +57,25 @@
 }
 
 .searchbar{
-    padding: 5px 10px;
-    padding-right: 100px;
+    padding: 5px 20px;
+    padding-right: 200px;
     background-color: rgba(255, 255, 255,0.7);
     border-radius: 10px;
     border: none;
     outline: none;
+    margin-left: 100px;
 }
 
 .profile-container{
     flex: 2;
     display: flex;
     align-items: center;
+    position:absolute;
+    right: 30px;
 }
 
 .profile-text-container{
-    margin: 0 30px;
+    margin: 0 20px;
 }
 
 .profile-picture{
@@ -73,6 +91,15 @@
 
 .menu-list-item{
     margin-right: 30px;
+    list-style: none;
+}
+
+
+.nav-link{
+    color: white;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: 0.3s ease;
 }
 
 .featured-content{
