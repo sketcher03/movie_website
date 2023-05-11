@@ -21,7 +21,7 @@
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
-    background: linear-gradient(45deg, rgb(255, 221, 0), rgb(255, 111, 0));
+    background: linear-gradient(45deg, rgb(5, 9, 251), rgb(147, 47, 5));
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
@@ -82,7 +82,7 @@ form.sign-up-form{
 
 .login-signup .title{
     font-size: 40px;
-    color: rgb(255, 217, 45);
+    color: rgb(188, 19, 235);
     margin: 20px 0px;
 }
 
@@ -90,7 +90,7 @@ form.sign-up-form{
     max-width: 400px;
     width: 100%;
     height: 55px;
-    background-color: rgb(26, 23, 14);
+    background-color: rgb(29, 15, 35);
     margin: 10px 0px;
     border-radius: 30px;
     display: grid;
@@ -101,7 +101,7 @@ form.sign-up-form{
 .input-field i{
     text-align: center;
     line-height: 60px;
-    color: rgb(255, 251, 217);
+    color: rgb(241, 228, 250);
     font-size: 18px;
 }
 
@@ -112,11 +112,11 @@ form.sign-up-form{
     line-height: 1;
     font-weight: 600;
     font-size: 15px;
-    color: rgb(255, 228, 54);
+    color: rgb(64, 11, 129);
 }
 
 .input-field input::placeholder{
-    color: rgb(81, 74, 50);
+    color: rgb(129, 78, 190);
     font-weight: 700;
 }
 
@@ -127,8 +127,8 @@ form.sign-up-form{
     outline: none;
     border-radius: 30px;
     cursor: pointer;
-    background-color: rgb(255, 243, 23);
-    color: rgb(43, 43, 43);
+    background-color: rgb(170, 10, 170);
+    color: rgb(249, 246, 246);
     text-transform: uppercase;
     font-weight: bolder;
     margin: 10px 0px;
@@ -136,8 +136,8 @@ form.sign-up-form{
 }
 
 .btn:hover{
-    background-color: rgb(159, 37, 13);
-    border: 3px solid rgb(228, 94, 16);
+    background-color: rgb(90, 5, 84);
+    border: 3px solid rgb(129, 60, 176);
     color: white;
 }
 
@@ -155,20 +155,20 @@ form.sign-up-form{
 .social-icon{
     height: 50px;
     width: 50px;
-    border: 3px solid rgb(62, 54, 29);
+    border: 3px solid rgb(62, 47, 100);
     margin: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: rgb(255, 251, 171);
+    color: rgb(185, 170, 202);
     font-size: 20px;
     border-radius: 30px;
 }
 
 .social-icon:hover{
-    color: rgb(255, 132, 0);
-    border: 3px solid rgb(255, 200, 0);
+    color: rgb(163, 11, 145);
+    border: 3px solid rgb(192, 10, 205);
     transition: 0.5s;
     transform: scale(1.0);
 }
@@ -409,3 +409,4 @@ form.sign-up-form{
     }
     
 }
+
