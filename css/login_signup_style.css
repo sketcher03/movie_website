@@ -305,6 +305,8 @@ form.sign-up-form{
         transition: 1s 0.75s ease-in-out;
     }
 
+    
+
     .panels-container{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr 1fr;
