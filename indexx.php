@@ -1,3 +1,11 @@
+<?php
+session_start();
+    $_SESSION;
+
+?>
+
+<!--html starts-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
