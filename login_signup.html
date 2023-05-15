@@ -1,9 +1,10 @@
 <?php
-
-  include 'connection.php'; // connecting  database 
+session_start();
+  include ("database.php"); // connecting  database 
+  
 
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
 
  <!-- login page -->
 
-                <form action="login.php" class="sign-in-form" method = "POST">
+                <form action="process-login.php" class="sign-in-form" method = "POST">
                     <h2 class="title">Sign in</h2>
 
                   
@@ -41,8 +42,9 @@
     
                     <input type="submit" value="Login" class="btn solid" name = "submit" >
 
-            <!--<button name = "submit"  class ="btn solid "  >login</button> -->
-<!--done with login -->
+            
+
+
 
                     <p class="social-text">Or Sign in with social platforms</p>
 
