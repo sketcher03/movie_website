@@ -73,7 +73,12 @@ session_start();
 
                     <div class="input-field">
                         <i class="fa-solid fa-signature"></i>
-                        <input type="text" placeholder="Name"  name= "name">
+                        <input type="text" placeholder="First-Name"  name= "fname">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-signature"></i>
+                        <input type="text" placeholder="Last-Name"  name= "lname">
                     </div>
 
 
@@ -102,8 +107,10 @@ session_start();
     
      <!-- done-->
 
+                <!-- socials
 
-                    <p class="social-text">Or Sign up with social platforms</p>
+
+                   <p class="social-text">Or Sign up with social platforms</p>
 
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -119,6 +126,10 @@ session_start();
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </div>
+
+-->
+
+
                 </form>
             </div>
         </div>
@@ -131,7 +142,7 @@ session_start();
                     <button class="btn transparent" id="sign-up-btn">Sign up</button>
                 </div>
 
-                <img src="img\login.svg" alt="" class="image">
+            
             </div>
 
             <div class="panel right-panel">
@@ -141,7 +152,7 @@ session_start();
                     <button class="btn transparent" id="sign-in-btn">Login</button>
                 </div>
 
-                <img src="img\signup.svg" alt="" class="image">
+                
             </div>
         </div>
     </div>

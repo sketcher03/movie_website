@@ -112,11 +112,11 @@ form.sign-up-form{
     line-height: 1;
     font-weight: 600;
     font-size: 15px;
-    color: rgb(64, 11, 129);
+    color: rgb(208, 181, 242);
 }
 
 .input-field input::placeholder{
-    color: rgb(129, 78, 190);
+    color: rgb(50, 26, 82);
     font-weight: 700;
 }
 
