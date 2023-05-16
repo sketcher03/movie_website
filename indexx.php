@@ -64,7 +64,7 @@ session_start();
                     <div class="profile-text-container">
 
                         <span class="profile-text">
-                            <a href="login_signup.html" class="nav-link">Login</a>
+                            <a href="login_signup.php" class="nav-link">Login</a>
                         </span>
                         <i class="fas fa-caret-down"></i>
 

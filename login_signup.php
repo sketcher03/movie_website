@@ -31,12 +31,12 @@ session_start();
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username" name= "username" id="log_name">
+                        <input type="text" placeholder="Username" name= "username" id="username">
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "password" id="log_pass">
+                        <input type="password" placeholder="Password" name = "password" id="password">
                     </div>
                   
     
@@ -66,7 +66,7 @@ session_start();
 
     <!--signup pagae -->
 
-                <form action="signup.php" class="sign-up-form" method= "POST" autocomplete = "off">
+                <form action="process-signup.php" class="sign-up-form" method= "POST" autocomplete = "off">
                     <h2 class="title">Sign up</h2>
 
                     
@@ -84,12 +84,12 @@ session_start();
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username"  name= "username">
+                        <input type="text" placeholder="Username" name= "username">
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="Email"  name= "email">
+                        <input type="text" placeholder="Email" name= "email">
                     </div>
 
                     

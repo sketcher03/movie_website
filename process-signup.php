@@ -15,7 +15,7 @@ if (isset($_POST['submit'])){
     $CPassword = mysqli_real_escape_string($conn,$_POST['cpassword']);
 
 
-    $select = mysqli_query($sconn, "SELECT* from account where email = '$Email' AND password= '$password'") or die('query failed');
+    $select = mysqli_query($conn, "SELECT* from user where email = '$Email' AND password= '$password'") or die('query failed');
     
     if(empty($username)|| empty($password)){
         echo 'Please fill in the blanks';
@@ -30,8 +30,19 @@ if (isset($_POST['submit'])){
             $message[] = 'Password Did Not Match';
         }
         else{
-            $md5pass = md5($Password);
-            $sql = "Insert into account(username, password, email, fname, lname) VALUES('$Username', "
+            $md5pass = md5($password);
+            $sql = "Insert into user(username, password, email, fname, lname) VALUES('$username', '$md5pass', '$Email', '$fname', '$lname')";
+            $insert = mysqli_query($conn,$sql)or die('query failed');
+
+
+            if($insert){
+                echo 'Signup Completed';
+                header('location:indexx.php');
+            }
+            else{
+                echo 'Signup Failed';
+                header ('location:login_signup.php');
+            }
         }
     }
 }
