@@ -133,7 +133,7 @@ session_start();
                         <img class="movie-list-item-img" src="img/4.jpg" alt="">
                         <span class="movie-list-item-title">1917</span>
                         <button class="movie-list-item-button">
-                            <a href="single_movie.html" class="nav-link">Watch</a></button>
+                            <a href="single_movie.php" class="nav-link">Watch</a></button>
                     </div>
 
 

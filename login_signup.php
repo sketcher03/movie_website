@@ -31,12 +31,12 @@ session_start();
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username" name= "username" id="username">
+                        <input type="text" placeholder="Username" name="username" id="username">
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "password" id="password">
+                        <input type="password" placeholder="Password" name="password" id="password">
                     </div>
                   
     
