@@ -1,7 +1,6 @@
 <?php
 session_start();
   include ("database.php"); // connecting  database 
-  
 
 ?>
  
@@ -64,7 +63,7 @@ session_start();
                     </div>
                 </form>
 
-    <!--signup pagae -->
+    <!--signup page -->
 
                 <form action="process-signup.php" class="sign-up-form" method= "POST" autocomplete = "off">
                     <h2 class="title">Sign up</h2>

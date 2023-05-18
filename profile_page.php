@@ -1,9 +1,16 @@
 <?php
-session_start();
-  include ("database.php"); // connecting  database 
-  
+    session_start();
+    include ("database.php"); // connecting  database 
 
+    // Check if the user is logged in
+    if (!isset($_SESSION['username'])) {
+        // Redirect the user to the login page or display an error message
+        header('Location: login_signup.php');
+        exit;
+    }
 ?>
+
+
 
 <html lang="en">
 <head>
@@ -78,25 +85,111 @@ session_start();
             
         <div class="profile-details">
             <h2>Profile </h2>
-            <form action="">
-                <h5>First-Name:</h5>
-                <textarea id = "mytextarea" placeholder = "Your Name"></textarea>
 
-                <h5>Last-Name:</h5>
-                <textarea id = "mytextarea" placeholder = "Your Name"></textarea>
+<?php
 
-                <h4>Email:</h4>
-                <textarea  id = "mytextarea" placeholder = "Your Email"></textarea>
+$userID = $_SESSION['username'];
 
-                <h4>Change Password:</h4>
-                <textarea  id = "mytextarea" placeholder = "New Password"></textarea><br><br>
+// Prepare and execute the query to retrieve user details
+$stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
+$stmt->bind_param("i", $userID);
+$stmt->execute();
 
-                <button type="submit">Update</button>
-           
-                <button>Delete Your Account</button>
+$result = $stmt->get_result();
+if ($result->num_rows > 0) {
+    // User found, display the details
+    $row = $result->fetch_assoc();
+    
+    echo "<form method='POST'>";
 
-            </form>
-        </div>
+    $fname = $row['fname'];
+    $lname = $row['lname'];
+    $username = $row['username'];
+    $Email = $row['email'];
+    $password = $row['password'];
+        
+    echo "<h5>User-Name:</h5><br><br>";
+    echo "<input id = 'username' type='text' name='username' value='$username'><br><br>";
+    echo "<h4>Email:</h4><br><br>";
+    echo "<input id = 'email' type='text' name='email' value='$Email'><br><br>";
+    echo "<h4>First-Name:</h4><br><br>";
+    echo "<input id = 'fname' type='text' name='fname' value='$fname'><br><br>";
+    echo "<h4>Last-Name:</h4><br><br>";
+    echo "<input id = 'lname' type='text' name='lname' value='$lname'><br><br>";
+    echo "<h4>Change-Password:</h4><br><br>";
+    echo "<input id = 'password' type='password' name='password' value='$password'><br><br>";
+    
+
+
+}
+else {
+    echo "<h4>User not found</h4>";
+}
+
+// Close the database connection
+$stmt->close();
+
+?>
+
+<?php
+    if (isset($_POST['updateButton'])){
+
+        $newpassword = $_POST['password'];
+        $newfname = $_POST['fname'];
+        $newlname = $_POST['lname'];
+        $newusername = $_POST['username'];
+        $newEmail = $_POST['email'];
+
+        $select = mysqli_query($conn, "SELECT * from user where username= '$newusername'") or die('query failed');
+
+            $md5pass = md5($newpassword);
+            $sql = "UPDATE user SET fname = '$newfname', lname = '$newlname', username = '$newusername', password = '$md5pass', email = '$newEmail' WHERE user.username = '$username'";
+            $update = mysqli_query($conn,$sql)or die('query failed');
+
+
+            if($update){
+                echo 'Signup Completed';
+                header('location:indexx.php');
+            }
+            else{
+                echo 'Signup Failed';
+                header ('location:login_signup.php');
+            }
+        
+    }
+        
+    echo "<hr><br><br>"; // Add a horizontal line between records
+    echo "</form>";
+
+?>
+
+<?php 
+if (isset($_POST['deleteButton'])) {
+
+    $sql = "DELETE FROM user WHERE username = '$username'";
+    $result = mysqli_query($conn, $sql);
+
+
+    if ($result) {
+        echo "<h5>Account deleted successfully!</h5><br>";
+    } else {
+        echo "<h5>Account delete failed</h5><br>" . mysqli_error($conn);
+    }
+}
+
+$conn->close();
+
+?>
+
+        <form method="post" action="">
+            <!--<label for="usernameToDelete">Username to delete:</label>
+            <input type="text" name="usernameToDelete" id="usernameToDelete" required>-->
+            <button type='submit' name='updateButton'>Update</button>;
+            <button type='submit' name='deleteButton'>Delete Account</button>;
+            
+        </form>
+    </div>
+
 
     </section>
 

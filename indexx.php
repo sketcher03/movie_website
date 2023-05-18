@@ -1,8 +1,10 @@
 <?php
 session_start();
-    $_SESSION;
+  include ("database.php"); // connecting  database 
+  
 
 ?>
+
 
 <!--html starts-->
 

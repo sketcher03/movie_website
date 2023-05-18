@@ -1,6 +1,7 @@
 <?php
 session_start();
-    $_SESSION;
+  include ("database.php"); // connecting  database 
+  
 
 ?>
 
@@ -86,25 +87,6 @@ session_start();
             <ul id="watchlistItems">
 
               <!-- Movie items will be dynamically added here -->
-            <?php
-            $query = "SELECT * FROM user where username = fname";
-            $result = mysqli_query($conn, $query);
-            
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "First-name: " . $row['fname'] . "<br>";
-                    echo "Last-name: " . $row['lname'] . "<br>";
-                    echo "Email: " . $row['email'] . "<br><br>";
-                }
-            } else {
-                echo "No records found.";
-            }
-            
-
-  
-
-            ?>
-              
 
             </ul>
           </div>

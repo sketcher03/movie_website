@@ -4,7 +4,6 @@ require_once('database.php');
 
 session_start();
 
-
 if (isset($_POST['submit'])){
 
     $fname = mysqli_real_escape_string($conn,$_POST['fname']);

@@ -1,3 +1,11 @@
+<?php
+session_start();
+  include ("database.php"); // connecting  database 
+  
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
