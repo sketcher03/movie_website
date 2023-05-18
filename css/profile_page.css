@@ -4,8 +4,7 @@
     --default-height-header: 3.5rem;
 
     --background-color-main: rgb(20, 20, 20);
-    --main-title-color: rgb(109, 240, 79);
-    --main-text-color: azure;
+
 }
 
 *{
@@ -15,31 +14,81 @@
     font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    font-size: 50px;
-    line-height: 64px;
-    color: var(--main-title-color);
+.profile-details{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    
+}
+
+#mytextarea{
+    width: 500px;
+    height: 40px; 
+    
+}
+
+::placeholder{
+    font-size: 18px;
 }
 
 h2{
-    font-size: 45px;
+    font-size: 30px;
     line-height: 55px;
-    color: rgb(255, 255, 255);
+    color: rgb(68, 230, 122);
     text-transform: capitalize;
 }
 
-h3{
-    font-size: 36px;
-    line-height: 30px;
-    color: rgb(255, 255, 255);
-    text-transform: capitalize;
+
+
+h4{
+    font-size: 20px;
+    color: rgb(223, 235, 67);
+    border-radius: 30px;
+    
 }
 
-h6{
-    font-size: 12px;
-    font-weight: 600;
+h5{
+    font-size: 20px;
+    color: rgb(223, 235, 67);
+    border-radius: 30px;
 }
 
+body{
+    width: 100%;
+    background-color: var(--background-color-main);
+    color: var(--main-text-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 30px;
+    margin-right: 50px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: rgb(242, 41, 41);
+    border-radius: 10px;
+}
+
+input{
+    border: none;
+    outline: none;
+}
 
 
 /* navbar */
@@ -114,6 +163,9 @@ h6{
     text-transform: capitalize;
     transition: 0.3s ease;
 }
+
+
+
 
 
 
@@ -198,6 +250,118 @@ footer h6{
     cursor: pointer;
 }
 
+/* Contact Page */
 
+#contact iframe{
+    width: 100vh;
+    margin-left: 30px;
+    border-radius: 20px;
+}
 
+#contact-info{
+    padding-left: 75px;
+}
 
+#contact-info div{
+    padding: 15px 0px;
+}
+
+#contact-info li{
+    list-style: none;
+    display: flex;
+    padding: 12px 0px;
+    align-items: center;
+}
+
+#contact-info li i{
+    font-size: 15px;
+    padding-right: 20px;
+}
+
+#contact-info li h5{
+    padding-left: 20px;
+}
+
+/* Contact Form */
+
+.contact{
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(rgb(20, 20, 20), rgb(24, 24, 24));
+    padding-top: 72px;
+}
+
+.contact .contact-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact h6{
+    color: whitesmoke;
+    font-size: 17px;
+    letter-spacing: 3.2px;
+    font-weight: 300;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 100px;
+    width: 200vh;
+}
+
+.contact .contact-form span{
+    margin-left: 24px;
+}
+
+.contact span{
+    color: rgb(129, 255, 225);
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 3rem;
+    margin-bottom: 40px;
+}
+
+.contact .row form .form-box{
+    border-radius: 15px;
+    padding: 20px;
+    margin: 7.5px 0px;
+    background-color: rgb(9, 9, 9);
+    color: white;
+    text-transform: none;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    border: 2.4px solid rgb(46, 45, 21);
+}
+
+.contact .row form .message{
+    height: 300px;
+    resize: none;
+}
+
+.contact button{
+    margin-top: 10px;
+    background-color: rgb(255, 255, 0);
+    color: rgb(24, 24, 24);
+    text-decoration: none;
+    text-align: none;
+    border: 3px solid transparent;
+    font-weight: bold;
+    padding: 15px 24px;
+    border-radius: 24px;
+    transition: .5s;
+}
+
+.contact button:hover{
+    background-color: rgb(96, 89, 0);
+    border: 2px solid rgb(255, 174, 0);
+    color: white;
+    transform: scale(1.05);
+    cursor: pointer;
+}

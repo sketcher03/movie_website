@@ -104,32 +104,7 @@ session_start();
                     </div>
 
                     <input type="submit" value="Sign up" name="submit" class="btn solid">
-    
-     <!-- done-->
-
-                <!-- socials
-
-
-                   <p class="social-text">Or Sign up with social platforms</p>
-
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                    </div>
-
--->
-
-
+                    
                 </form>
             </div>
         </div>

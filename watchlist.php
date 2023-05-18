@@ -1,3 +1,10 @@
+<?php
+session_start();
+    $_SESSION;
+
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +25,7 @@
 
      <!--navbar-->
 
-<body1>
+<body>
     
 
         <div class="navbar-container">
@@ -30,18 +37,18 @@
                 <ul class="menu-list">
 
                     <li class="menu-list-item">
-                        <a href="indexx.html" class="nav-link">Home</a>
+                        <a href="indexx.php" class="nav-link">Home</a>
                     </li>
                     <li class="menu-list-item">
-                        <a href="series_list.html" class="nav-link">TV Show</a>
+                        <a href="series_list.php" class="nav-link">TV Show</a>
                     </li>
                     <li class="menu-list-item">
-                        <a href="movie_list.html" class="nav-link">Movies</a>
+                        <a href="movie_list.php" class="nav-link">Movies</a>
                     </li>
                     <li class="menu-list-item">
-                        
+                        <a href="watchlist.php" class="nav-link">Watch-list</a>
                     </li>
-                    <input class ="searchbar" type="text" placeholder="Search..">
+                    <input class ="searchbar" type ="text" placeholder = "Search..">
 
                 </ul>
 
@@ -54,9 +61,9 @@
                 <div class="profile-text-container">
 
                     <span class="profile-text">
-                        <a href="login_signup.html" class="nav-link">Login</a>
+                        <a href="login_signup.php" class="nav-link">Login</a>
+                        <a href="profile_page.php" class="nav-link">profile</a>
                     </span>
-                    <i class="fas fa-caret-down"></i>
 
                 </div>
 
@@ -73,25 +80,36 @@
           </h1>
 
 
-          <body2>
-            <div class="container">
-              <h2>My Watchlist</h2>
-          
-              <form id="watchlistForm">
-                <input type="text" id="movieTitle" placeholder="Movie title">
-                <button type="submit" id="addBtn">Add</button>
-              </form>
-          
-              <ul id="watchlistItems">
+          <div class="container">
+            <h2>My Watchlist</h2>
+        
+            <ul id="watchlistItems">
 
-                <!-- Movie items will be dynamically added here -->
+              <!-- Movie items will be dynamically added here -->
+            <?php
+            $query = "SELECT * FROM user where username = fname";
+            $result = mysqli_query($conn, $query);
+            
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "First-name: " . $row['fname'] . "<br>";
+                    echo "Last-name: " . $row['lname'] . "<br>";
+                    echo "Email: " . $row['email'] . "<br><br>";
+                }
+            } else {
+                echo "No records found.";
+            }
+            
 
-              </ul>
-            </div>
-          
-            <script src="watchlist.js"></script>
+  
 
-          </body2>
+            ?>
+              
+
+            </ul>
+          </div>
+        
+          <script src="watchlist.js"></script>
 
 
     <!-- footer section -->
@@ -108,5 +126,5 @@
 
         <h6>© 2022 Movie Club - All Rights Reserved</h6>
     </footer>  
-</body1>
+</body>
 </html>

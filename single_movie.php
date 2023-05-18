@@ -1,3 +1,10 @@
+<?php
+session_start();
+  include ("database.php"); // connecting  database 
+  
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,19 +36,20 @@
 
                 <ul class="menu-list">
 
-                    <li class="menu-list-item">
-                        <a href="indexx.html" class="nav-link">Home</a>
+                <li class="menu-list-item">
+                        <a href="indexx.php" class="nav-link">Home</a>
                     </li>
                     <li class="menu-list-item">
-                        <a href="series_list.html" class="nav-link">TV Show</a>
+                        <a href="series_list.php" class="nav-link">TV Show</a>
                     </li>
                     <li class="menu-list-item">
-                        <a href="movie_list.html" class="nav-link">Movies</a>
+                        <a href="movie_list.php" class="nav-link">Movies</a>
                     </li>
                     <li class="menu-list-item">
-                        
+                        <a href="watchlist.php" class="nav-link">Watch-list</a>
                     </li>
                     <input class ="searchbar" type="text" placeholder="Search..">
+
 
                 </ul>
 
@@ -54,9 +62,9 @@
                 <div class="profile-text-container">
 
                     <span class="profile-text">
-                        <a href="login_signup.html" class="nav-link">Login</a>
+                        <a href="login_signup.php" class="nav-link">Login</a>
+                        <a href="profile_page.php" class="nav-link">profile</a>
                     </span>
-                    <i class="fas fa-caret-down"></i>
 
                 </div>
 
