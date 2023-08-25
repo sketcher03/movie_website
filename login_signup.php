@@ -1,9 +1,9 @@
 <?php
-
-  include 'connection.php'; // connecting  database 
+session_start();
+  include ("database.php"); // connecting  database 
 
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,34 +20,31 @@
     <div class="container">
         <div class="forms-container">
             <div class="login-signup">
- <!-- logib page -->
-                <form action="login.php" class="sign-in-form" method = "POST">
+
+ <!-- login page -->
+
+                <form action="process-login.php" class="sign-in-form" method = "POST">
                     <h2 class="title">Sign in</h2>
 
-                    <!-- <?php
-                    
-                    if(isset($message)){
-                        foreach($message as $message){
-                            echo '<div class="message">'.$message.'</div>';
-                        }
-                    }
-                    
-                    ?> -->
+                  
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username" name= "username" id="log_name">
+                        <input type="text" placeholder="Username" name="username" id="username">
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "password" id="log_pass">
+                        <input type="password" placeholder="Password" name="password" id="password">
                     </div>
                   
     
                     <input type="submit" value="Login" class="btn solid" name = "submit" >
-            <!--<button name = "submit"  class ="btn solid "  >login</button> -->
-<!--done with login -->
+
+            
+
+
+
                     <p class="social-text">Or Sign in with social platforms</p>
 
                     <div class="social-media">
@@ -65,35 +62,33 @@
                         </a>
                     </div>
                 </form>
-    <!--signup pagae -->
-                <form action="signup.php" class="sign-up-form" method= "POST" autocomplete = "off">
+
+    <!--signup page -->
+
+                <form action="process-signup.php" class="sign-up-form" method= "POST" autocomplete = "off">
                     <h2 class="title">Sign up</h2>
 
                     
-                    <!-- <?php
-                    
-                    if(isset($message)){
-                        foreach($message as $message){
-                            echo '<div class="message">'.$message.'</div>';
-                        }
-                    }
-                    
-                    ?> -->
 
                     <div class="input-field">
                         <i class="fa-solid fa-signature"></i>
-                        <input type="text" placeholder="Name"  name= "name">
+                        <input type="text" placeholder="First-Name"  name= "fname">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-signature"></i>
+                        <input type="text" placeholder="Last-Name"  name= "lname">
                     </div>
 
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username"  name= "username">
+                        <input type="text" placeholder="Username" name= "username">
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="Email"  name= "email">
+                        <input type="text" placeholder="Email" name= "email">
                     </div>
 
                     
@@ -108,26 +103,7 @@
                     </div>
 
                     <input type="submit" value="Sign up" name="submit" class="btn solid">
-    
-     <!-- done-->
-
-
-                    <p class="social-text">Or Sign up with social platforms</p>
-
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                    </div>
+                    
                 </form>
             </div>
         </div>
@@ -140,7 +116,7 @@
                     <button class="btn transparent" id="sign-up-btn">Sign up</button>
                 </div>
 
-                <img src="img\login.svg" alt="" class="image">
+            
             </div>
 
             <div class="panel right-panel">
@@ -150,12 +126,12 @@
                     <button class="btn transparent" id="sign-in-btn">Login</button>
                 </div>
 
-                <img src="img\signup.svg" alt="" class="image">
+                
             </div>
         </div>
     </div>
 
-    <script src="js\app.js"></script>
+    <script src="app.js"></script>
 
     <script>
     

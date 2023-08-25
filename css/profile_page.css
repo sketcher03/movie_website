@@ -4,8 +4,7 @@
     --default-height-header: 3.5rem;
 
     --background-color-main: rgb(20, 20, 20);
-    --main-title-color: rgb(109, 240, 79);
-    --main-text-color: azure;
+
 }
 
 *{
@@ -15,45 +14,43 @@
     font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    font-size: 50px;
-    line-height: 64px;
-    color: var(--main-title-color);
+.profile-details{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    
+}
+
+#mytextarea{
+    width: 500px;
+    height: 40px; 
+    
+}
+
+::placeholder{
+    font-size: 18px;
 }
 
 h2{
-    font-size: 45px;
+    font-size: 30px;
     line-height: 55px;
-    color: rgb(255, 255, 255);
+    color: rgb(68, 230, 122);
     text-transform: capitalize;
 }
 
-h3{
-    font-size: 36px;
-    line-height: 30px;
-    color: rgb(255, 255, 255);
-    text-transform: capitalize;
-}
+
 
 h4{
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(223, 235, 67);
+    border-radius: 30px;
+    
 }
 
 h5{
     font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-
-h6{
-    font-size: 12px;
-    font-weight: 600;
-}
-
-p{
-    font-size: 15px;
-    font-weight: 400;
-    color: rgb(208, 208, 208);
+    color: rgb(223, 235, 67);
+    border-radius: 30px;
 }
 
 body{
@@ -79,6 +76,13 @@ button{
     cursor: pointer;
     border: none;
     outline: none;
+    margin-top: 30px;
+    margin-right: 50px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: rgb(242, 41, 41);
+    border-radius: 10px;
 }
 
 input{
@@ -162,118 +166,7 @@ input{
 
 
 
-.rating{
-    display: flex;
-    align-items: center;
-    margin-top: 24px;
-}
 
-.user-rating{
-    display: flex;
-    flex-direction: row;
-}
-
-.imdb-logo{
-    height: 50px;
-    width: 75px;    
-}
-
-#rate {
-    margin-left: 10px;
-    color: yellow;
-    font-weight: bold;
-}
-
-/* Trailer */
-.trailer{
-    margin-top: 70px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.trailer h2{
-    padding: 20px;
-}
-
-
-/* Featured Products */
-
-.feature-product{
-    text-align: center;
-    padding: 40px 80px;
-    margin-top: 40px;
-}
-
-.feature-product .product{
-    width: 23%;
-    min-width: 250px;
-    padding: 15px 15px;
-    border: 1px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 20px, 20px 30px rgb(16, 16, 16);
-    margin: 15px 0px;
-    transition: 0.2s;
-}
-
-.feature-product .product:hover{
-    box-shadow: 20px, 20px 30px black;
-}
-
-.feature-product .product img{
-    object-fit: cover;
-    width: 100%;
-    height: 450px;
-    border-radius: 10px;
-}
-
-.feature-product .product .description{
-    text-align: center;
-
-    padding: 10px 0px;
-}
-
-.feature-product .product .description span{
-    color: rgb(188, 170, 114);
-}
-
-.feature-product .product .description h5{
-    font-size: 20px;
-    padding: 2px 0px;
-}
-
-.feature-product .product .description i{
-    font-size: 12px;
-    color: yellow;
-}
-
-.feature-product .product .description h4{
-    font-size: 18px;
-    color: rgb(70, 255, 147);
-    padding-top: 7px;
-    font-weight: 700;
-}
-
-.feature-product .product a{
-    width: 40px;
-    font-size: 20px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 100px;
-    background-color: rgb(46, 46, 46);
-    font-weight: 500;
-    color: rgb(87, 227, 89);
-    padding: 10px 15px;
-    border: 1px solid rgb(58, 58, 58);
-}
-
-.feature-product .product-container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    flex-wrap: wrap;
-}
 
 
 /* Footer Section */
@@ -355,113 +248,6 @@ footer h6{
 
 .sml-img{
     cursor: pointer;
-}
-
-/* Product Page */
-
-.product-details{
-    padding: 40px 150px;
-    display: flex;
-    margin-top: 20px;
-}
-
-.product-details .single-pro-image{
-    width: 40%;
-    margin-right: 50px;
-    border-radius: 10px;
-    box-shadow: black;
-    height: max-content;
-}
-
-.product-details .single-pro-details{
-    width: 50%;
-    padding-top: 30px;
-}
-
-.product-details .single-pro-details h2{
-    padding: 10px 0px;
-    font-size: 60px;
-}
-
-.product-details .single-pro-details span{
-    color: aquamarine;
-}
-
-.product-details .single-pro-details select{
-    display: block;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    color: white;
-    background-color: rgb(45, 45, 45);
-}
-
-.product-details .single-pro-details input{
-    width: 50px;
-    height: 50px;
-    padding-left: 10px;
-    font-size: 15px;
-    margin-right: 10px;
-    color: white;
-    border: 2px solid white;
-    background: transparent;
-    border-radius: 10px;
-}
-
-.product-details .single-pro-details button{
-    color: rgb(252, 252, 252);
-    border: 2px solid rgb(42, 39, 39);
-    background-color: rgb(35, 32, 32);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: capitalize;
-    padding: 12px 24px;
-    border-radius: 10px;
-    transition: 0.5s;
-    margin-top: 10px;
-}
-
-.product-details .single-pro-details h4{
-    font-size: 24px;
-    padding: 20px 0px;
-}
-
-.product-details .single-pro-details h5{
-    color: rgb(146, 146, 146);
-    font-weight: 500;
-}
-
-.pagination{
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.pagination a{
-    font-weight: 600;
-    padding: 15px 22px;
-    text-decoration: none;
-    background-color: rgb(145, 255, 106);
-    border-radius: 10px;
-    margin: 10px 2px;
-    color: rgb(70, 70, 70);
-}
-
-.pagination a:hover{
-    background-color: rgb(72, 138, 70);
-    border: 2px solid rgb(62, 255, 88);
-    color: antiquewhite;
-    cursor: pointer;
-}
-
-.pagination a i{
-   font-weight: bold;
-}
-
-#about img{
-    width: 50%;
-    margin-right: 75px;
-    border-radius: 20px;
 }
 
 /* Contact Page */
